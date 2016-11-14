@@ -1,18 +1,16 @@
-#Set wd where the data is stored
-#setwd("D:\\Personal\\Coursea\\4.  Exploratory Data Analysis\\Week 1\\Assignment1")
-
-#library(sqldf, lubridate)
+#Libraries used
+library(sqldf, lubridate)
 
 ##Setting Up the Workspace
 #Create a directory for the data to be stored if one does not exist already
-#if(!file.exists("./data")){dir.create("./data")}
+if(!file.exists("./data")){dir.create("./data")}
 
 ##Downloading Data
 #Download dataset and unzip
-#fileurl <- "http://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip"
-#download.file(fileurl, "./data/dataset.zip")
+fileurl <- "http://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip"
+download.file(fileurl, "./data/dataset.zip")
 setwd("data")
-#unzip("./dataset.zip")
+unzip("./dataset.zip")
 
 fi <- file("household_power_consumption.txt")
 
